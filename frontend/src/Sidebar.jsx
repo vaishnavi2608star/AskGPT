@@ -298,7 +298,7 @@ function Sidebar() {
   const getAllThreads = async () => {
     try {
       const response = await fetch(
-        "http://localhost:8080/api/threads"
+        "https://askgpt-1.onrender.com/api/threads"
       );
 
       const data = await response.json();

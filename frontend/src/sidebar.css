@@ -1,0 +1,111 @@
+.sidebar {
+    background-color: #171717;
+    color: #b4b4b4;
+    height: 100vh;
+    width: 320px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* New Chat Button */
+button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: transparent;
+    border: 0.5px solid rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    color: white;
+}
+
+button:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+button span {
+    font-size: 20px;
+}
+
+/* Logo */
+.logo {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* History Section */
+.history {
+    flex: 1;
+    margin: 10px;
+    padding: 10px;
+    overflow-y: auto;
+}
+
+.history li {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+
+    padding: 10px;
+    margin-bottom: 5px;
+
+    border-radius: 10px;
+    cursor: pointer;
+
+    transition: background-color 0.2s ease;
+}
+
+.history li:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* Selected Chat */
+.highlighted {
+    background-color: rgba(255, 255, 255, 0.08);
+}
+
+/* Chat Title */
+.chatTitle {
+    flex: 1;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+/* Delete Icon */
+.deleteIcon {
+    opacity: 0;
+    color: #b4b4b4;
+    font-size: 14px;
+
+    transition: opacity 0.2s ease, color 0.2s ease;
+
+    /* Prevent shrinking */
+    flex-shrink: 0;
+}
+
+/* Show icon only when hovering chat */
+.history li:hover .deleteIcon {
+    opacity: 1;
+}
+
+/* Red hover effect */
+.deleteIcon:hover {
+    color: #ff4d4f;
+}
+
+/* Footer */
+.sign {
+    padding: 10px;
+    margin: 10px;
+    font-size: 14px;
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}

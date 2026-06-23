@@ -121,7 +121,7 @@ function ChatWindow() {
     try {
       const userMessage = prompt;
 
-      const response = await fetch("http://localhost:8080/api/chat", {
+      const response = await fetch("https://askgpt-1.onrender.com/api/chat", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

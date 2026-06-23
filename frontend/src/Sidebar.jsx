@@ -331,7 +331,7 @@ function Sidebar() {
   const changeThread = async (threadID) => {
     try {
       const response = await fetch(
-        `http://localhost:8080/api/threads/${threadID}`
+        `https://askgpt-1.onrender.com/api/threads/${threadID}`
       );
 
       const messages = await response.json();
@@ -349,7 +349,7 @@ function Sidebar() {
   const deleteThread = async (threadID) => {
     try {
       await fetch(
-        `http://localhost:8080/api/threads/${threadID}`,
+        `https://askgpt-1.onrender.com/api/threads${threadID}`,
         {
           method: "DELETE",
         }

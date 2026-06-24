@@ -18,11 +18,11 @@ app.get("/", (req, res) => {
   res.send("Backend is running 🚀");
 });
 
-console.log("RAW URI:", process.env.MONGODB_URI);
+console.log("RAW URI:", process.env.MONGO_URI);
 
 const connectDB = async () => {
   try {
-    if (!process.env.MONGODB_URI) {
+    if (!process.env.MONGO_URI) {
       throw new Error("MONGODB_URI is missing");
     }
 

@@ -110,7 +110,7 @@ function ChatWindow() {
     prompt,
     setPrompt,
     setReply,
-    currentThreadID,
+    currentThreadId,
     setnewChat,
     setprevChats,
   } = useContext(MyContext);
@@ -127,7 +127,7 @@ function ChatWindow() {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          threadID: currentThreadID,
+          threadID: currentThreadId,
           message: userMessage,
         }),
       });

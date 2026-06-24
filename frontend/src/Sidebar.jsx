@@ -349,11 +349,11 @@ function Sidebar() {
   const deleteThread = async (threadID) => {
     try {
       await fetch(
-        `https://askgpt-1.onrender.com/api/threads${threadID}`,
-        {
-          method: "DELETE",
-        }
-      );
+  `https://askgpt-1.onrender.com/api/threads/${threadID}`,
+  {
+    method: "DELETE",
+  }
+);
 
       setAllThreads((prev) =>
         prev.filter((thread) => thread.threadID !== threadID)
